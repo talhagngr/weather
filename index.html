@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <input type="text" id="city" placeholder="Enter city name" />
-        <button onclick="getWeather()">Get Weather</button>
-        <div id="weather"></div>
+    <div id="city1" class="city">
+        <h2>City 1</h2>
+        <p id="city1-weather"></p>
+        <p id="city1-time"></p>
     </div>
-    <script src="app.js"></script>
+    <div id="city2" class="city">
+        <h2>City 2</h2>
+        <p id="city2-weather"></p>
+        <p id="city2-time"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
