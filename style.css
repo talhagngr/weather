@@ -20,7 +20,7 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjust as needed */
 }
 
-#Corum {
+#Çorum {
     margin-right: auto;
 }
 
@@ -35,9 +35,11 @@ body {
 }
 
 .city-text {
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
     #Çorum, #Denizli {
         margin: 10px auto;
