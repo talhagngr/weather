@@ -1,26 +1,29 @@
-async function getWeather() {
-    const cityName = document.getElementById('city').value;
-    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API Key
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+// Define the cities and API key
+const cities = ['Çorum', 'Denizli'];
+const apiKey = '02be11762ed0b5c74ccb4ef25b847d17
+'; // Replace with your actual API key
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        const weatherData = await response.json();
-        displayWeather(weatherData);
-    } catch (error) {
-        console.error('Error fetching the weather data: ', error);
-        alert('Failed to retrieve the weather data. Please check the city name and try again.');
-    }
+// Function to get weather for a city
+function getWeather(city) {
+    // Construct the URL
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    // Make the API request
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Unable to fetch weather for ${city}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Log the weather information to the console
+            console.log(`Weather in ${city}: ${data.weather[0].description}, Temperature: ${data.main.temp}°C`);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
-function displayWeather(data) {
-    const weatherDiv = document.getElementById('weather');
-    weatherDiv.innerHTML = `
-        <h2>${data.name}, ${data.sys.country}</h2>
-        <p>${data.weather[0].description}</p>
-        <p>Temperature: ${data.main.temp}°C</p>
-    `;
-}
+// Get weather for each city
+cities.forEach(city => getWeather(city));
