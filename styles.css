@@ -5,6 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    flex-wrap: wrap; /* Allows the blocks to wrap to the next line on smaller screens */
 }
 
 .city {
@@ -12,6 +13,8 @@ body {
     margin: 10px;
     border-radius: 8px;
     overflow: hidden;
+    width: calc(50% - 20px); /* 50% of the body width minus margin */
+    box-sizing: border-box;
 }
 
 .city-img {
@@ -23,7 +26,7 @@ body {
 .city-text {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     text-align: center;
