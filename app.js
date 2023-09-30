@@ -5,7 +5,7 @@ const apiKey = '02be11762ed0b5c74ccb4ef25b847d17'; // Be cautious with exposing 
 // Function to get weather for a city
 function getWeather(city) {
     // Construct the URL
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     // Make the API request
     fetch(url)
