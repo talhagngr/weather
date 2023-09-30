@@ -36,7 +36,7 @@ body {
 
 .city-text {
     display: flex;
-    align-items: center;
+    align-items: center; !important;
     justify-content: center;
 }
 
