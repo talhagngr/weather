@@ -1,6 +1,6 @@
 // Define the cities and API key
 const cities = ['Çorum', 'Denizli'];
-const apiKey = '02be11762ed0b5c74ccb4ef25b847d17'; // Replace with your actual API key
+const apiKey = '02be11762ed0b5c74ccb4ef25b847d17'; // Be cautious with exposing API keys
 
 // Function to get weather for a city
 function getWeather(city) {
@@ -16,8 +16,20 @@ function getWeather(city) {
             return response.json();
         })
         .then(data => {
-            // Log the weather information to the console
-            console.log(`Weather in ${city}: ${data.weather[0].description}, Temperature: ${data.main.temp}°C`);
+            // Find the div element for the city
+            const cityDiv = document.getElementById(city);
+            
+            // Create paragraph elements for weather description and temperature
+            const weatherP = document.createElement('p');
+            const tempP = document.createElement('p');
+            
+            // Set the text content of the paragraph elements
+            weatherP.textContent = `Weather: ${data.weather[0].description}`;
+            tempP.textContent = `Temperature: ${data.main.temp}°C`;
+            
+            // Append the paragraph elements to the city div
+            cityDiv.appendChild(weatherP);
+            cityDiv.appendChild(tempP);
         })
         .catch(error => {
             console.error('Error:', error);
