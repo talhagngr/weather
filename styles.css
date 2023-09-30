@@ -8,13 +8,6 @@ body {
     background-color: #f4f4f4; /* Adjust as needed */
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-}
 
 .city {
     position: relative;
