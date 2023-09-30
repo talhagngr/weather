@@ -5,8 +5,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    flex-wrap: wrap; /* Allows the blocks to wrap to the next line on smaller screens */
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -14,12 +14,13 @@ body {
     width: 80%; /* Adjust as needed */
     max-width: 1200px; /* Adjust as needed */
 }
+
 .city {
     position: relative;
+    flex: 1;
     margin: 10px;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(50% - 20px); /* 50% of the body width minus margin */
     box-sizing: border-box;
 }
 
@@ -38,6 +39,7 @@ body {
     text-align: center;
     padding: 10px;
 }
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
