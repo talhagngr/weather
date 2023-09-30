@@ -38,7 +38,11 @@ body {
     text-align: center;
     padding: 10px;
 }
-
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
 @media (max-width: 768px) {
     .city {
         width: 100%;
