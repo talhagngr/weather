@@ -12,12 +12,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    background-color: #ffffff; /* Adjust as needed */
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Optional */
-    border-radius: 8px; /* Optional */
-    overflow: hidden;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
 }
 
 .city {
@@ -28,7 +24,15 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     background-color: #ffffff; /* Adjust as needed */
-    padding-bottom: 40px; /* Adjust as needed */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
+#Çorum {
+    margin-right: auto;
+}
+
+#Denizli {
+    margin-left: auto;
 }
 
 .city-img {
@@ -38,20 +42,15 @@ body {
 }
 
 .city-text {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    text-align: center;
     padding: 10px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
-    .city {
-        width: 100%;
+    #Çorum, #Denizli {
+        margin: 10px auto;
     }
 }
