@@ -39,11 +39,6 @@ body {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
     #Çorum, #Denizli {
         margin: 10px auto;
     }
-}
