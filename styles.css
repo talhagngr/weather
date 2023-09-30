@@ -8,12 +8,24 @@ body {
 }
 
 .city {
-    background-color: #e0e0e0;
-    padding: 20px;
+    position: relative;
     margin: 10px;
     border-radius: 8px;
+    overflow: hidden;
 }
 
-h2 {
-    margin-top: 0;
+.city-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.city-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
