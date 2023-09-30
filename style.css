@@ -10,9 +10,7 @@ body {
 
 
 .city {
-    position: relative;
-    flex: 1;
-    margin: 10px;
+    margin: 10px auto;
     border-radius: 8px;
     overflow: hidden;
     box-sizing: border-box;
@@ -27,9 +25,7 @@ body {
 }
 
 .city-text {
-    display: flex;
     text-align: center;
-    justify-content: center;
 }
 
 
