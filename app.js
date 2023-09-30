@@ -1,7 +1,6 @@
 // Define the cities and API key
 const cities = ['Çorum', 'Denizli'];
-const apiKey = '02be11762ed0b5c74ccb4ef25b847d17
-'; // Replace with your actual API key
+const apiKey = '02be11762ed0b5c74ccb4ef25b847d17'; // Replace with your actual API key
 
 // Function to get weather for a city
 function getWeather(city) {
